@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employees</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .container {
+      display: flex;
+      gap: 40px;
+    }
+    .employee-list, .employee-info {
+      flex: 1;
+    }
+    .employee-info {
+      background-color: #f2f2f2;
+      padding: 20px;
+      border-radius: 4px;
+    }
+    button {
+      margin-left: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Employees</h1>
+  <div class="container">
+    <div class="employee-list">
+      <h2>List of Employees</h2>
+      <ul id="employee-list">
+        <!-- Employee list will be populated by JavaScript -->
+      </ul>
+      <h2>Search Employee</h2>
+      <input type="text" id="search-firstname" placeholder="Enter first name...">
+      <button id="search-employee">Search and View Employee</button>
+      
+      <h2>Add Employee</h2>
+      <input type="text" id="add-firstname" placeholder="First name">
+      <input type="text" id="add-lastname" placeholder="Last name">
+      <input type="number" id="add-age" placeholder="Age">
+      Married? <input type="checkbox" id="add-isMarried">
+      <br>
+      <button id="add-employee">Add Employee</button>
+      
+      <h2>Edit Employee</h2>
+      <input type="hidden" id="edit-id">
+      <input type="text" id="edit-firstname" placeholder="First name">
+      <input type="text" id="edit-lastname" placeholder="Last name">
+      <input type="number" id="edit-age" placeholder="Age">
+      Married? <input type="checkbox" id="edit-isMarried">
+      <br>
+      <button id="update-employee">Update Employee</button>
+      <button id="delete-employee">Delete Employee</button>
+    </div>
+    <div class="employee-info">
+      <h2>View Employee Info</h2>
+      <div id="employee-details">
+        <p>Select an employee to view details</p>
+      </div>
+    </div>
+  </div>
+  <script>
+    window.viewEmployeeDetails = function(id, firstname, lastname, age, isMarried) {};
+    window.prepareEditEmployee = function(id, firstname, lastname, age, isMarried) {};
+    window.prepareDeleteEmployee = function(id) {};
+  </script>
+
+  <script type="module" src="../dist/app.js"></script>
+</body>
+</html>
